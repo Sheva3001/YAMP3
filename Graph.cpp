@@ -107,7 +107,7 @@ void Graph::BFS() {
 }
 
 int Graph::wires(int** array, int* external, int _n) {
-	//Считаем рёбра
+	//РЎС‡РёС‚Р°РµРј СЂС‘Р±СЂР°
 	int Edges = 0;
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < n; j++)
@@ -115,7 +115,7 @@ int Graph::wires(int** array, int* external, int _n) {
 				Edges++;
 	Edges = Edges / 2;
 
-	// Разбиваем на компоненты связности и считаем рёбра
+	// Р Р°Р·Р±РёРІР°РµРј РЅР° РєРѕРјРїРѕРЅРµРЅС‚С‹ СЃРІСЏР·РЅРѕСЃС‚Рё Рё СЃС‡РёС‚Р°РµРј СЂС‘Р±СЂР°
 	int vertex; int res = 0; int assocVertex = 0; int MaxConnComp = 0;
 	bool* visit = new bool[n];
 	for (int i = 0; i < n; i++)
